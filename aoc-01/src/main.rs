@@ -3,7 +3,7 @@
 use aoclib;
 use std::io;
 
-fn do_count(data: &Vec<i32>) -> usize {
+fn do_count(data: &[i32]) -> usize {
     let res: usize = data
     .windows(2)
     .filter(|d| d[1] > d[0])
