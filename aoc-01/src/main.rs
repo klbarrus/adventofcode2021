@@ -9,7 +9,7 @@ fn do_count(data: &[i32]) -> usize {
     .filter(|d| d[1] > d[0])
     .count();
 
-    return res;
+    res
 }
 
 fn main() -> io::Result<()> {
