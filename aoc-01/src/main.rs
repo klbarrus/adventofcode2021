@@ -4,10 +4,7 @@ use aoclib;
 use std::io;
 
 fn do_count(data: &[i32]) -> usize {
-    let res: usize = data
-    .windows(2)
-    .filter(|d| d[1] > d[0])
-    .count();
+    let res: usize = data.windows(2).filter(|d| d[1] > d[0]).count();
 
     res
 }
@@ -16,9 +13,9 @@ fn main() -> io::Result<()> {
     let lines = aoclib::read_file_lines(&"aoc-01.txt")?;
 
     let prog_data = lines
-    .iter()
-    .map(|a| (a.parse::<i32>().unwrap()))
-    .collect::<Vec<_>>();
+        .iter()
+        .map(|a| (a.parse::<i32>().unwrap()))
+        .collect::<Vec<_>>();
 
     //println!("{:#?}", prog_data);
 
@@ -26,9 +23,9 @@ fn main() -> io::Result<()> {
     println!("Part 1: {}", part1);
 
     let triple_sum = prog_data
-    .windows(3)
-    .map(|a| a.iter().sum())
-    .collect::<Vec<_>>();
+        .windows(3)
+        .map(|a| a.iter().sum())
+        .collect::<Vec<_>>();
 
     //println!("{:#?}", triple_sum);
 
